@@ -7,7 +7,7 @@ from tensorflow.contrib import learn as tflearn
 from tensorflow.contrib import layers as tflayers
 
 TIMESTEPS = 20 # input time steps
-OUTPUT_TIMESTEPS = 8 # output time steps
+OUTPUT_TIMESTEPS = 10 # output time steps
 OUTPUT_DIM = 3 # True: hand(0:3)
 
 
