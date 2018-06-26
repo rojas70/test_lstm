@@ -6,8 +6,8 @@ from tensorflow.python.framework import dtypes
 from tensorflow.contrib import learn as tflearn
 from tensorflow.contrib import layers as tflayers
 
-TIMESTEPS = 20
-OUTPUT_TIMESTEPS = 5
+TIMESTEPS = 20 # input time steps
+OUTPUT_TIMESTEPS = 8 # output time steps
 OUTPUT_DIM = 3 # True: hand(0:3)
 
 
@@ -62,7 +62,7 @@ def lstm_model(num_units, rnn_layers, dense_layers=None, learning_rate=0.1, opti
         print('X_ length:', len(X_))
         print('X_[0].shape:', X_[0].get_shape())
         
-        output, layers = tf.contrib.rnn.static_rnn(stacked_lstm, X_, dtype=dtypes.float32)
+        output, layers = tf.contrib.rnn.static_rnn(stacked_lstm, X_, dtype=dtypes.float32) # origin lSTM output
         print('output shape of rnn:', output[-1].get_shape())
         
         y_pred = dnn_layers(output[-1], dense_layers)
