@@ -5,8 +5,8 @@ import tensorflow as tf
 BATCH_SIZE = 64
 DATA_DIM = 5
 
-MODEL_SAVED_PATH = './snapshots/model.ckpt'
-MODEL_SAVED_DIR = './snapshots'
+MODEL_SAVED_PATH = './snapshot/model.ckpt'
+MODEL_SAVED_DIR = './snapshot'
 
 MAX_ITERATION = 100000
 DISPLAY_INTERVAL = MAX_ITERATION // 100
